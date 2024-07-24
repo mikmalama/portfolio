@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">My Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <div class="slider">
+        <div class="slides">
+          <div class="slide"><img src="5.avif" alt="Slide 1" /></div>
+          <div class="slide"><img src="7.JPG" alt="Slide 2" /></div>
+          <div class="slide"><img src="4.webp" alt="Slide 3" /></div>
+        </div>
+      </div>
+      <div class="hero-content">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Your one-stop destination to explore my work and skills.</p>
+        <a href="#projects" class="btn">View My Projects</a>
+      </div>
+    </section>
+    <section id="about">
+      <div class="profile">
+        <img src="1.png" alt="Profile Picture" />
+      </div>
+      <h2>About Me</h2>
+      <div class="about-content">
+        <div class="text">
+          <h3>Mikma</h3>
+          <p>
+            Welcome to my portfolio! I am a passionate and dedicated individual
+            with a strong interest in finance and web development. My journey in
+            finance has led me to explore various aspects of the field, and I am
+            currently working on designing a finance website, which features a
+            green logo symbolizing growth and prosperity. In addition to my work
+            in finance, I am actively involved in community service. On February
+            17th, 2024, my team and I visited an animal shelter to understand
+            their needs and provide support. We engaged various classes to
+            inform them about our program, which resulted in positive responses
+            and generous donations.<br>
+              On the event day, we delivered food and cash donations to the
+              shelter, managed the items efficiently, and performed for the
+              shelter's staff and members. </br>
+            We also helped design and print banners, and collected donations
+            from family, relatives, and gym acquaintances. I am also interested
+            in the Bajrangbali Savings and Loan Cooperative Society Ltd, an
+            organization that reflects my commitment to finance and community
+            development. My skills include HTML, CSS, JavaScript, WordPress, and
+            React, which I use to create engaging and user-friendly websites.
+            Through my portfolio, I aim to showcase my work and skills, and
+            connect with like-minded individuals and potential collaborators.
+          </p>
+        </div>
+        <div class="image">
+          <img src="programs.png" alt="About Me Image" />
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="project-container">
+        <div class="project">
+          <img src="3.jpg" alt="Project 1" />
+          <h3>Smart Home System</h3>
+          <p>Project details</p>
+        </div>
+        <div class="project">
+          <img src="4.webp" alt="Project 2" />
+          <h3>Smart City</h3>
+          <p>Project details</p>
+        </div>
+        <div class="project">
+          <img src="emotion.jpg" alt="Project 3" />
+          <h3>Speech Emotion Recognition</h3>
+          <p>Project details</p>
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+      <h2>My Skills</h2>
+      <div class="skills-container">
+        <div class="skill">
+          <img src="html.png" alt="HTML" />
+          <p>HTML</p>
+        </div>
+        <div class="skill">
+          <img src="css.png" alt="CSS" />
+          <p>CSS</p>
+        </div>
+        <div class="skill">
+          <img src="js.png" alt="JavaScript" />
+          <p>JavaScript</p>
+        </div>
+        <div class="skill">
+          <img src="word.png" alt="WordPress" />
+          <p>WordPress</p>
+        </div>
+        <div class="skill">
+          <img src="react.png" alt="React" />
+          <p>React</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-icons">
+        <a href="tel:+9779861555099"><img src="call.png" alt="Phone" /></a>
+        <a href="https://facebook.com"
+          ><img src="facebook.png" alt="Facebook"
+        /></a>
+        <a href="https://instagram.com"
+          ><img src="insta.png" alt="Instagram"
+        /></a>
+        <a href="https://linkedin.com"
+          ><img src="linkdin.png" alt="LinkedIn"
+        /></a>
+      </div>
+    </section>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        const projects = document.querySelectorAll(".project");
+        const skills = document.querySelectorAll(".skill");
+
+        projects.forEach((project) => {
+          const rect = project.getBoundingClientRect();
+          if (rect.top < window.innerHeight) {
+            project.classList.add("fade-up");
+          }
+        });
+
+        skills.forEach((skill) => {
+          const rect = skill.getBoundingClientRect();
+          if (rect.top < window.innerHeight) {
+            skill.classList.add("zoom-in");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
